@@ -21,7 +21,7 @@
 <body>
 
 <h1>Homestead — Privacy Policy</h1>
-<p class="sub">Last updated: 08 September 2026</p>
+<p class="sub">Last updated: 21 October 2026</p>
 
 <p>Homestead helps you keep track of the appliances and maintenance in your home.
 This policy explains what it stores, where that goes, and how to get rid of it.
@@ -31,8 +31,9 @@ It is written to be read rather than to be legally impressive.</p>
 <p>Homestead stores what you put into it. It works entirely on your phone unless
 you sign in, at which point your data also syncs to your own private area of our
 Firebase project so you can reach it from another device. Photos you scan are
-sent to Google's Gemini API to be read. Nothing is sold, nothing is shared for
-advertising, and there is no analytics or tracking in the app.</p>
+sent through Homestead's own server to Anthropic's Claude API to be read. Nothing
+is sold, nothing is shared for advertising, and there is no analytics or tracking
+in the app. If the app crashes, a crash report is sent so the bug can be fixed.</p>
 
 <h2>What is stored</h2>
 <ul>
@@ -46,6 +47,9 @@ advertising, and there is no analytics or tracking in the app.</p>
   <li><strong>An anonymous identifier</strong>, created when the app first runs, used
       to count AI scans against a monthly allowance. It contains nothing personal
       and is not linked to you unless you sign in.</li>
+  <li><strong>Crash reports</strong>, only when the app crashes — the error, the
+      screen it happened on, your phone model and Android version, and an
+      installation identifier. They contain none of your records or photos.</li>
 </ul>
 
 <p>Homestead does not collect your location, your contacts, your other apps, or
@@ -58,9 +62,15 @@ anything you have not deliberately given it.</p>
   <li><strong>Google Firebase</strong>, if you sign in — Firestore for your records
       and Cloud Storage for your documents, both under an area only your account
       can read or write.</li>
-  <li><strong>Google's Gemini API</strong>, when you use a scanning feature — the
-      photo or typed description is sent to be read, and the result comes back to
-      your phone. This happens through Firebase AI Logic.</li>
+  <li><strong>Anthropic's Claude API</strong>, when you use a scanning or lookup
+      feature — the photo, or the brand and model you typed, goes to Homestead's
+      server (Google Cloud Functions in our Firebase project), which sends it to
+      Anthropic to be read and returns the result to your phone. For model lookups
+      and manual searches, Claude may search the web using the brand and model.
+      Anthropic does not use this data to train its models; see
+      <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>.</li>
+  <li><strong>Firebase Crashlytics</strong>, if the app crashes — the crash report
+      described above goes to Google so the bug can be found and fixed.</li>
   <li><strong>Manufacturer websites</strong>, when you ask Homestead to find a manual —
       it fetches the file directly from wherever it is published, so that site sees
       an ordinary web request.</li>
