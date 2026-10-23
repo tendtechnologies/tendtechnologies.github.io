@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Homestead — Privacy Policy</title>
+<title>Homesake — Privacy Policy</title>
 <style>
   :root { color-scheme: light dark; }
   body {
@@ -20,18 +20,18 @@
 </head>
 <body>
 
-<h1>Homestead — Privacy Policy</h1>
-<p class="sub">Last updated: 21 October 2026</p>
+<h1>Homesake — Privacy Policy</h1>
+<p class="sub">Last updated: 22 October 2026</p>
 
-<p>Homestead helps you keep track of the appliances and maintenance in your home.
+<p>Homesake helps you keep track of the appliances and maintenance in your home.
 This policy explains what it stores, where that goes, and how to get rid of it.
 It is written to be read rather than to be legally impressive.</p>
 
 <h2>The short version</h2>
-<p>Homestead stores what you put into it. It works entirely on your phone unless
+<p>Homesake stores what you put into it. It works entirely on your phone unless
 you sign in, at which point your data also syncs to your own private area of our
 Firebase project so you can reach it from another device. Photos you scan are
-sent through Homestead's own server to Anthropic's Claude API to be read. Nothing
+sent through Homesake's own server to Anthropic's Claude API to be read. Nothing
 is sold, nothing is shared for advertising, and there is no analytics or tracking
 in the app. If the app crashes, a crash report is sent so the bug can be fixed.</p>
 
@@ -47,12 +47,17 @@ in the app. If the app crashes, a crash report is sent so the bug can be fixed.<
   <li><strong>An anonymous identifier</strong>, created when the app first runs, used
       to count AI scans against a monthly allowance. It contains nothing personal
       and is not linked to you unless you sign in.</li>
+  <li><strong>Subscription status</strong>, only if you subscribe to Homesake Pro or
+      Homesake Landlord — whether a subscription is active, which tier and plan, and when the current period ends, plus a
+      purchase token (a code from Google Play that identifies the subscription), kept
+      on our server and linked to your account so the subscription can be checked.
+      Homesake never sees your payment card or billing details.</li>
   <li><strong>Crash reports</strong>, only when the app crashes — the error, the
       screen it happened on, your phone model and Android version, and an
       installation identifier. They contain none of your records or photos.</li>
 </ul>
 
-<p>Homestead does not collect your location, your contacts, your other apps, or
+<p>Homesake does not collect your location, your contacts, your other apps, or
 anything you have not deliberately given it.</p>
 
 <h2>Where it goes</h2>
@@ -63,15 +68,21 @@ anything you have not deliberately given it.</p>
       and Cloud Storage for your documents, both under an area only your account
       can read or write.</li>
   <li><strong>Anthropic's Claude API</strong>, when you use a scanning or lookup
-      feature — the photo, or the brand and model you typed, goes to Homestead's
+      feature — the photo, or the brand and model you typed, goes to Homesake's
       server (Google Cloud Functions in our Firebase project), which sends it to
       Anthropic to be read and returns the result to your phone. For model lookups
       and manual searches, Claude may search the web using the brand and model.
       Anthropic does not use this data to train its models; see
       <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>.</li>
+  <li><strong>Google Play</strong>, if you subscribe to Homesake Pro or Landlord &mdash; the purchase,
+      payment, free trial, renewal and cancellation are all handled by Google Play under
+      Google's terms, not by Homesake. Homesake's server asks Google Play whether a
+      subscription is active, using the purchase token, and stores the answer (status,
+      tier, plan and end date) so paid features unlock on your devices. To cancel, use
+      Google Play &rarr; Payments &amp; subscriptions.</li>
   <li><strong>Firebase Crashlytics</strong>, if the app crashes — the crash report
       described above goes to Google so the bug can be found and fixed.</li>
-  <li><strong>Manufacturer websites</strong>, when you ask Homestead to find a manual —
+  <li><strong>Manufacturer websites</strong>, when you ask Homesake to find a manual —
       it fetches the file directly from wherever it is published, so that site sees
       an ordinary web request.</li>
 </ul>
@@ -96,7 +107,7 @@ any photo leaving the device at all.</p>
   <li><strong>Run at startup</strong> — reminders are rebuilt after a restart, because
       Android discards scheduled alarms when a phone reboots.</li>
 </ul>
-<p>Photographs are taken through your phone's own camera app, so Homestead never
+<p>Photographs are taken through your phone's own camera app, so Homesake never
 holds camera permission itself.</p>
 
 <h2>How long it is kept</h2>
@@ -110,14 +121,19 @@ as one is how people lose things they cannot get back.</p>
       It goes from the phone and from your synced copy.</li>
   <li><strong>Everything on the phone</strong> — uninstall, or clear the app's storage
       in Android settings.</li>
-  <li><strong>Your account and everything synced to it</strong> — email
+  <li><strong>Your account and everything synced to it</strong> — in the app, open
+      Settings &rarr; Delete account and data and confirm. This immediately deletes your
+      synced records, uploaded documents, scan history, subscription status and sign-in account from our
+      servers, and clears the app's data from your phone. It cannot be undone. Without an
+      account, the same row reads &ldquo;Delete all data on this phone&rdquo;. You can still ask
+      by email instead: write to
       <a href="mailto:madhu.dev.apps@gmail.com">madhu.dev.apps@gmail.com</a> from the address
-      you signed in with. Your records, documents and account are deleted within 30
+      you signed in with, and your records, documents and account are deleted within 30
       days and confirmed by reply.</li>
 </ul>
 
 <h2>Children</h2>
-<p>Homestead is not directed at children under 13 and is not designed for their use.</p>
+<p>Homesake is not directed at children under 13 and is not designed for their use.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes in a way that affects what is collected or where it goes,
